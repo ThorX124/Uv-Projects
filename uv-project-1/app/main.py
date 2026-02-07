@@ -1,6 +1,10 @@
-def main():
-    print("Hello from uv-project-1!")
+from fastapi import FastAPI
+
+app = FastAPI(
+    title="Todo API",
+    description="A simple API for managing todo items",
+    version="1.0.0"
+)
 
 
-if __name__ == "__main__":
-    main()
+app.include_router(todo_router, prefix="/api")
