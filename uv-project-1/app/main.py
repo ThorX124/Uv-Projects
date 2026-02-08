@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from app.api.todos import router as todo_router
 
 app = FastAPI(
     title="Todo API",
